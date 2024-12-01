@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+@import "../public/sass/fonts/fonts";
+@import "../public/sass/mixins/mixins";
+@import "../public/sass/_animations.scss";
+
+
+$primary: #810019;
+$white: #ffffff;
+$secondary: #d9d9d9;
+$dark: #000000;
+$info: #232323;
+
+
+$otherGlobalColors: (
+  "primary-2": #f80a38,
+  "dark-less": #232323,
+  "onamob": rgba(241, 111, 35, 1),
+);
+
+
+
+
+
+@import "bootstrap/scss/bootstrap";
+
+
+@each $color-name, $value in $otherGlobalColors {
+    @include makeAsGlobalColors($color-name, $value);
+  }
+  
+  // global font-sizes
+  $fontSizes: (
+    "xv-large": 80px,
+    "xxx-large": 40px,
+    "xx-large": 35px,
+    "x-large": 28px,
+    "large": 24px,
+    "l-medium": 20px,
+    "medium": 18px,
+    "normal": 16px,
+    "l-small": 15px,
+    "small": 14px,
+    "x-small": 12px,
+  );
+  @each $name, $size in $fontSizes {
+    @include generateSizeClass($name, $size);
+  }
+
+  .font-abel {
+    font-family: abel !important;
+  }
+  
+  
+  
