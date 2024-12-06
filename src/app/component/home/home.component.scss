@@ -2,3 +2,92 @@
     width: 100%;
     height: 100vh;
 }
+
+.card {
+    border: none;
+    border-radius: 10px;
+  }
+  .card .rounded-pill {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .bg-seconda{
+    background-color:#e4e6e8;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  
+   
+  
+    .bg-dang{
+        background-color:#dc3545 ;
+        color: white !important;
+        height: 15vh; 
+        width: 80%;
+    }
+    &:hover{
+       
+        background-color:#dc3545;
+        color: white;
+        .bg-dang{
+                background-color: white;
+                color: #dc3545 !important;
+        }
+      
+    }
+  }
+  .card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .rounded-circle {
+    border-radius: 50% !important;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image {
+    display: block;
+  
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
